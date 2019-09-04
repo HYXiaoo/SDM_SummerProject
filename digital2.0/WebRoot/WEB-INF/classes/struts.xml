@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.custom.i18n.resources" value="language"/>
+	<constant name="struts.i18n.encoding" value="utf-8"/>
+	<constant name="struts.ui.theme" value="simple"/>
+	<!-- <constant name="struts.locale" value="en_US"/> -->
+	
+	<package name="acccountActions" namespace="" extends="struts-default">
+		
+		<interceptors>
+			<interceptor name="toLogin" class="com.interceptor.AuthorizationInterceptor"></interceptor>
+			<interceptor-stack name="mainIntStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="toLogin"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+	
+        <action name="Login" class="com.actions.Login">
+            <result name="success" type="chain">Typelist</result>
+            <result name="error">/login.jsp</result>
+        </action>
+        <action name="Register" class="com.actions.Register">
+        	<result name="success">/login.jsp</result>
+            <result name="error">/reg.jsp</result>
+            <result name="input">/reg.jsp</result>
+        </action>
+        <action name="Typelist" class="com.actions.Typelist" method="getList">
+        	<interceptor-ref name="mainIntStack"></interceptor-ref>
+        	<result name="success" type="chain">Productlist</result>
+        	<result name="error">/login.jsp</result>
+        </action>
+        <action name="Productlist" class="com.actions.Productlist" method="getList">
+        	<interceptor-ref name="mainIntStack"></interceptor-ref>
+        	<result name="success">/index.jsp</result>
+        	<result name="error">/login.jsp</result>
+        </action>
+        <action name="Time" class="com.actions.TimeCounter">
+        	<result name="success">/NULL.html</result>
+        </action>
+        
+    </package>
+</struts>

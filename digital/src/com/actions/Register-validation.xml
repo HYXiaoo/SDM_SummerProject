@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+  		
+<validators>
+	<field name="user.userName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>%{getText('username')}%{getText('notnull')}</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">4</param>
+			<param name="maxLength">16</param>
+			<message>%{getText('username')}%{getText('between')}</message>
+		</field-validator>
+	</field>
+	
+	<field name="user.PASSWORD">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>%{getText('Passw')}%{getText('notnull')}</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<param name="maxLength">16</param>
+			<message>%{getText('Passw')}%{getText('between')}</message>
+		</field-validator>
+	</field>
+	
+	<field name="repassword">
+		<field-validator type="fieldexpression">
+			<param name="expression">repassword==user.PASSWORD</param>
+			<message>%{getText('RePassw')}</message>
+		</field-validator>
+	</field>
+	
+	<field name="user.realname">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>%{getText('name')}%{getText('notnull')}</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">2</param>
+			<param name="maxLength">8</param>
+			<message>%{getText('name')}%{getText('between')}</message>
+		</field-validator>
+	</field>
+	
+	<field name="user.sex">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>%{getText('SexError')}</message>
+		</field-validator>
+	</field>
+	
+	<field name="user.address">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>%{getText('Addr')}%{getText('notnull')}</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">30</param>
+			<message>%{getText('Addr')}%{getText('mustless')}</message>
+		</field-validator>
+	</field>
+	
+	<field name="user.email">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>%{getText('Mail')}%{getText('notnull')}</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">49</param>
+			<message>%{getText('Mail')}%{getText('mustless')}</message>
+		</field-validator>
+	</field>
+	
+</validators>

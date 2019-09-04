@@ -1,0 +1,229 @@
+/*tested size of a full-screen page of the exploror 1519*725 */
+*{
+	margin:0px;
+	padding:0px;
+}
+.Bars{
+	width:100%;
+	height:50px;
+	background-color:rgba(255,255,255,0.75);
+	box-shadow:0px 2px 2px #000;
+	position:absolute;
+}
+.Tittle{
+	font-family:华文行楷;
+	font-size:32px;
+	text-indent:10px;
+	vertical-align:middle;
+	margin-top:9px;
+}
+#bkgd{
+	width:1600px;
+	height:900px;
+	position:fixed;
+	top:0;
+	z-index:-100;
+	background-image:url(../pics/bkgd.jpg);
+	background-size:100%;
+}
+#bkgdCover{
+	width:1600px;
+	height:900px;
+	position:fixed;
+	top:0;
+	z-index:-99;
+	background-color:rgba(0,0,0,0.5);
+}
+#bottomBar{
+	height:10px;
+	background-color:rgb(36,33,28);
+	box-shadow:0 -5px 10px #000;
+	color:rgba(255,255,255,0.75);
+	font-size:12px;
+	padding-top:26px;
+	font-family: Impact;
+	line-height:0;
+	text-indent:10px;
+}
+.ContentSquare{
+	position:absolute;
+	background-color:rgba(255,255,255,0.75);
+	border-radius:20px;
+	box-shadow:2px 2px 2px #000;
+}
+.TitleText{
+	text-align:center;
+	font-family:华文行楷;
+	font-size:48px;
+	padding:30px 0 0px 0;
+	white-space:nowrap;
+}
+.ErrorMessage{
+	font-family:微软雅黑;
+	font-size:15px;
+	height:25px;
+	color:#C03;
+	font-weight:bolder;
+	text-align:center;
+}
+.OpText{
+	width:90%;
+	text-align:left;
+	outline:none;
+	box-shadow:none;
+	border:none;
+	color:#333;
+	background-color:#fff;
+	height:44px;
+	margin-left: 5%;
+	font-family:微软雅黑;
+	font:15px;
+	margin-bottom:5px;
+	border-radius: 2px;
+	text-indent: 10px;
+	font-weight:bold;
+}
+.OpText_narrow{
+	width:29%;
+	text-align:left;
+	outline:none;
+	box-shadow:none;
+	border:none;
+	color:#333;
+	background-color:#444;
+	color:#fff;
+	height:30px;
+	font-family:微软雅黑;
+	font:10px;
+	margin-bottom:5px;
+	text-indent: 0px;
+	font-weight:bold;
+	margin-left:130px;
+	text-indent:5px;
+}
+.InputLabel{
+	position:absolute;
+	left:6%;
+	top:0%;
+	font-family:微软雅黑;
+	font-weight:bolder;
+	border-radius: 2px 0 0 2px;
+	background-color:#FFF;
+	height:30px;
+	line-height:180%;
+	text-indent:5px;
+	width:20%;
+}
+.ErrorLabel{
+	position:absolute;
+	left:55%;
+	top:0%;
+	font-family:微软雅黑;
+	font-weight:bolder;
+	color:#F03;
+	background-color:#FFF;
+	font-size:14px;
+	height:30px;
+	width:40%;
+	line-height:200%;
+	overflow:hidden;
+	text-indent:5px;
+	list-style:none;
+	border-radius:0px 2px 2px 0;
+}
+.UiButton{
+	width:90%;
+	text-align:center;
+	box-shadow:none;
+	border:none;
+	color:#fff;
+	background-color:#000;
+	height:35px;
+	margin-left: 5%;
+	font-family:微软雅黑;
+	font:18px;
+	font-weignt:bold;
+	border-radius: 4px;
+	transition:all 0.3s linear;
+}
+.UiButton:hover{
+	background-color:#999;
+}
+a{
+	color:#000;
+	text-decoration:none;
+	font-family:微软雅黑;
+	font-size:15px;
+	transition:all 0.3s linear;
+}
+a:hover{
+	color:#999;
+}
+p.GoodsType{
+	font-size:20px;
+	font-weight:bold;
+	margin-left:25px;
+	font-family:楷体;
+	width:90px;
+	display:inline-block;
+	
+}
+p.BrandsType{
+	font-size:20px;
+	margin-left:40px;
+	font-family:楷体;
+	display:inline;
+}
+.GoodsFrame{
+	height:300px;
+	width:250px;
+	/*background-color:red;*/
+	display:inline-block;
+	position:relative;
+	margin:0px 20px;
+}
+.GoodsImg{
+	height:200px;
+	width:200px;
+	border-width:10px;
+	border-color:#CCC;
+	border-style:solid;
+	border-radius:2px;
+	box-shadow:1px 1px 2px #000;
+	display:block;
+	margin-left:15px;
+	transition:all 0.2s linear;
+}
+
+.GoodsImg:hover{
+	border-color:#666;
+}
+
+.GoodsInfoTable{
+	width:220px;
+	height:60px;
+	margin-left:15px;
+	margin-top:10px;
+}
+
+	
+.InfoCol{
+	width:160px;
+	height:20px;
+	font-size:18px;
+	font-family:宋体;
+	font-weight:bold;
+	text-align:left;
+}
+.CartSymbol{
+	width:60px;
+	height:60px;
+	border-radius:30px;
+	box-shadow:1px 1px 2px #000;
+	transition:all 0.1s linear;
+}
+.CartSymbol:hover{
+	width:55px;
+	height:55px;
+	border-radius:27px;
+}
